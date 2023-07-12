@@ -70,7 +70,7 @@ class _WeatherDetailPageWidgetState extends State<WeatherDetailPageWidget> {
                             ),
                       ),
                       Text(
-                        '25°C',
+                        '27°C',
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Readex Pro',
                               color: FlutterFlowTheme.of(context).primaryText,
@@ -353,6 +353,25 @@ class _WeatherDetailPageWidgetState extends State<WeatherDetailPageWidget> {
                       ),
                     ),
                   ],
+                ),
+                Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 23.0, 0.0, 0.0),
+                    child: Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      elevation: 4.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Text(
+                        'Hello World',
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
