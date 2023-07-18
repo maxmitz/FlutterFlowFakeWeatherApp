@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'weather_detail_page_model.dart';
 export 'weather_detail_page_model.dart';
+import 'package:rive/rive.dart';
 
 class WeatherDetailPageWidget extends StatefulWidget {
   const WeatherDetailPageWidget({Key? key}) : super(key: key);
@@ -354,6 +355,13 @@ class _WeatherDetailPageWidgetState extends State<WeatherDetailPageWidget> {
                     ),
                   ],
                 ),
+                SizedBox(
+                  width: 300,
+                  height: 300,
+                  child: RiveAnimation.network(
+                    'https://cdn.rive.app/animations/vehicles.riv',
+                  ),
+                )
               ],
             ),
           ),
