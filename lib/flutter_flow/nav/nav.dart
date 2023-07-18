@@ -45,11 +45,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'WeatherDetailPage',
           path: '/weatherDetailPage',
           builder: (context, params) => WeatherDetailPageWidget(),
-        ),
-        FFRoute(
-          name: 'CitiesOverViewPage',
-          path: '/citiesOverViewPage',
-          builder: (context, params) => CitiesOverViewPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

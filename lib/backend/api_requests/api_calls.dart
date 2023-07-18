@@ -10,7 +10,11 @@ export 'api_manager.dart' show ApiCallResponse;
 const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class WeatherApiCall {
-  static Future<ApiCallResponse> call() {
+  static Future<ApiCallResponse> call({
+    dynamic? weatherMapJson,
+  }) {
+    final weatherMap = _serializeJson(weatherMapJson);
+
     return ApiManager.instance.makeApiCall(
       callName: 'weather api',
       apiUrl:
